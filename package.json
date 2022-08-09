@@ -1,0 +1,26 @@
+{
+  "name": "do-note-forget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DouglasRed/do-note-forget.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DouglasRed/do-note-forget/issues"
+  },
+  "homepage": "https://github.com/DouglasRed/do-note-forget#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
