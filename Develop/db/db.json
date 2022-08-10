@@ -1,12 +1,19 @@
 {
   "notes": [
     {
+      "id": "1",
       "title": "Test Title",
       "text": "Test text"
     },
     {
+      "id": "2",
       "title": "Take out the trash",
       "text": "The trash stinks and is leaking"
+    },
+    {
+      "title": "Coding Project 2",
+      "text": "Time's ticking",
+      "id": "3"
     }
   ]
 }
