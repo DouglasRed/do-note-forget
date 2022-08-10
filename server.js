@@ -1,13 +1,15 @@
 const fs = require("fs");
 const path = require("path");
 const express = require("express");
-const { notes } = require("./develop/db/db.json");
+const { notes } = require("./db/db.json");
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
+app.use(express.static("public"));
 
 function filterByQuery(query, notesArray) {
   let filteredResults = notesArray;
@@ -36,7 +38,7 @@ function createNewNote(body, notesArray) {
   notesArray.push(note);
 
   fs.writeFileSync(
-    path.join(__dirname, "./Develop/db/db.json"),
+    path.join(__dirname, "./db/db.json"),
     JSON.stringify({ notes: notesArray }, null, 2)
   );
   return note;
@@ -67,6 +69,18 @@ app.get("/api/notes/:id", (req, res) => {
   } else {
     res.send(404);
   }
+});
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./public/index.html"));
+});
+
+app.get("/notes", (req, res) => {
+  res.sendFile(path.join(__dirname, "./public/notes.html"));
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
 app.post("/api/notes", (req, res) => {
