@@ -5,6 +5,7 @@
 - [Project Description](#Description)
 - [Installation](#Installation)
 - [Usage](#Usage)
+- [Collaborators](#Collaborators)
 - [GitHub](#GitHub)
 
 ## Description
@@ -26,6 +27,10 @@ In order to download my code you will have to clone my repo and install express.
 As we mature, we will gain more responsibility in our life whether that is in our work-life or personal life. Using this application will help stay origanized and maximize your day.
 
 ![Alt text](./public/assets/images/Note-taker.jpg)
+
+## Collaborators
+
+I would like to give credit to Xander Rapstine (https://github.com/Xandromus) and John McCambridge (https://github.com/nol166) for being contributers on this project by providing the front-end code.
 
 ## Contact Me
 
